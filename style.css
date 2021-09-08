@@ -167,7 +167,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background-image: url(images/minimal.jpg);
+    background-image: url(minimal.jpg);
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -223,7 +223,7 @@ section .title::after{
 
 /* about section styling */
 .about{
-    background-image: url(images/kai03.jpg);
+    background-image: url(kai03.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
