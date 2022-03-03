@@ -36,6 +36,7 @@ section{
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
+
 }
 .about, .services, .skills, .projects, .contact, footer{
     font-family: 'Poppins', sans-serif;
@@ -878,3 +879,4 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+
