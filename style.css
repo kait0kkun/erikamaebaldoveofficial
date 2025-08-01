@@ -272,6 +272,7 @@ section .title::after{
     color: indianred;
     background: none;
 }
+
 /* services section styling */
 .services {
     color: #222;
@@ -287,12 +288,12 @@ section .title::after{
     content: "What I Provide";
 }
 
-/* Make cards flex and equal height */
 .services .serv-content {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    align-items: stretch;
 }
 
 .services .serv-content .card {
@@ -315,9 +316,7 @@ section .title::after{
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     transition: all 0.3s ease;
-    height: 100%;
 }
 
 .services .serv-content .card:hover .box {
@@ -339,6 +338,15 @@ section .title::after{
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+
+/* Optional: Truncate long text to fit */
+.services .serv-content .card p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
 
 /* projects section styling */
 .projects{
