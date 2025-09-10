@@ -80,6 +80,8 @@ $(document).ready(function(){
             subject: $(".subject").val(),
             message: $(".message").val()
         };
+        
+        console.log(templateParams);
 
         emailjs.send("service_ul3jbgj", "template_ae6q70g", templateParams)
             .then(function(response){
