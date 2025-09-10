@@ -71,7 +71,8 @@ $(document).ready(function(){
     });
 
     // EmailJS integration
-    $("#contact-form").on("submit", function(event){
+
+    $(".contact-form").on("submit", function(event){
         event.preventDefault();
 
         const templateParams = {
@@ -83,9 +84,11 @@ $(document).ready(function(){
 
         emailjs.send("service_ul3jbgj", "template_ae6q70g", templateParams)
             .then(function(response){
+                console.log("SUCCESS!", response.status, response.text);
                 alert("Message sent successfully!");
-                $("#contact-form")[0].reset();
+                $(".contact-form")[0].reset();
             }, function(error){
+                console.log("FAILED...", error);
                 alert("Failed to send message. Please try again.");
             });
     });
