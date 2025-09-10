@@ -52,7 +52,7 @@ $(document).ready(function(){
     $('.carousel').owlCarousel({
         margin: 20,
         loop: true,
-        autoplayTimeOut: 2000,
+        autoplayTimeOut: 500,
         autoplayHoverPause: true,
         responsive: {
             0:{
@@ -68,5 +68,25 @@ $(document).ready(function(){
                 nav: false
             }
         }
+    });
+
+    // EmailJS integration
+    $("#contact-form").on("submit", function(event){
+        event.preventDefault();
+
+        const templateParams = {
+            from_name: $(".fullname").val(),
+            from_email: $(".email-input").val(),
+            subject: $(".subject").val(),
+            message: $(".message").val()
+        };
+
+        emailjs.send("service_ul3jbgj", "template_ae6q70g", templateParams)
+            .then(function(response){
+                alert("Message sent successfully!");
+                $("#contact-form")[0].reset();
+            }, function(error){
+                alert("Failed to send message. Please try again.");
+            });
     });
 });
