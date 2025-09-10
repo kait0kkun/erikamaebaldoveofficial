@@ -71,7 +71,6 @@ $(document).ready(function(){
     });
 
     // EmailJS integration
-
     $(".contact-form").on("submit", function(event){
         event.preventDefault();
 
